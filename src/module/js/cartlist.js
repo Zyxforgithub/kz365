@@ -1,0 +1,12 @@
+require.config({
+	paths:{
+		"jquery":"../lib/jquery-2.0.3"
+	}
+})
+require(["loadcartlist"],function(){
+	$("nav").on("mouseenter",".classification",function(){
+		$(".drop-nav-item").stop().slideDown()
+	}).on("mouseleave",".classification",function(){
+		$(".drop-nav-item").stop().slideUp();
+	})
+})

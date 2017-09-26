@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+	<header class="container">
+		<div class="header-top clear w1200">
+			<div class="header-top-right pull-right padding-vertical-sm">
+				<a href="#">我的订单</a>
+				<a href="#">帮助中心</a>
+				<span class='padding-left-sm'>客服热线：<span class="text-success">400-9026-365</span></span>
+			</div>
+		</div>
+	</header>
+	<section class="user_logo container bg-white">
+		<div class="w1200 clear">
+			<div class="logo padding-top-xl margin-left-default pull-left">
+				<a href="#"><img src="images/logo.png" alt="" class=" margin-right-sm"></a>
+				<span class="text-success padding-left-sm">欢迎注册</span>
+			</div>
+			<div class="pull-right padding-top-xl margin-top-lg">
+				<p>已有账号？<a href="#" class="text-success">请登录</a></p>
+			</div>
+		</div>
+	</section>
+	<div id="tip"></div>
+	<section class="register_panel container">
+		<div class="register_inner w1200 bg-white margin-vertical-xl clear padding-bottom-lg">
+			<div class="register_form">
+				<form action="javascript:;">
+					<div class="input-group padding-top-lg">
+						<span class="col-3">公司名称&nbsp;：</span>
+						<div class="col-6">
+							<input type="text" name="cname" id="cname" class="input-item">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="col-3">手机号码&nbsp;：</span>
+						<div class="col-6">
+							<input type="text" name="phone" id="phone" class="input-item">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="col-3">图片验证&nbsp;：</span>
+						<div class="col-3">
+							<input type="text" name="confirm" id="confirm" class="input-item">
+						</div>
+						<i class="col-3" id="codebox">图片验证</i>
+					</div>
+					<div class="input-group">
+						<span class="col-3">手机验证码&nbsp;：</span>
+						<div class="col-3">
+							<input type="text" name="pconfirm" id="pconfirm" class="input-item">
+						</div>
+						<i class="col-3 btn">手机验证</i>
+					</div>
+					<div class="input-group">
+						<span class="col-3">输入密码&nbsp;：</span>
+						<div class="col-6">
+							<input type="text" name="password" id="password" class="input-item">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="col-3">确认密码&nbsp;：</span>
+						<div class="col-6">
+							<input type="text" name="repwd" id="repwd" class="input-item">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="col-3">邀请码&nbsp;：</span>
+						<div class="col-6">
+							<input type="text" name="invitecode" id="invitecode" class="input-item">
+						</div>
+					</div>
+					<p>
+						<input type="checkbox" id="readed">
+						<label for="readed">我已阅读并接受<a href="#" class="text-success">《快租365用户注册协议》</a></label>
+					</p>
+					<div>
+						<button class="btn" id="tijiao">立即注册</button>
+					</div>
+				</form>
+			</div>
+			<div class="register_side">
+				<div class="side_img"></div>
+			</div>
+		</div>
+	</section>
+	<footer></footer>
+</body>
+<script src="lib/require.js" data-main="./js/register"></script>
+</html>
