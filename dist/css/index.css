@@ -690,6 +690,19 @@ horizontal 水平
 nav {
   border-bottom: 2px solid #8fc31f; }
 
+#showNum {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  right: 0;
+  top: 0;
+  font-size: 12px; }
+
 .banner {
   position: relative;
   height: 460px; }

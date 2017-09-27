@@ -19,7 +19,7 @@ gulp.task("htmldoc",()=>{
 
 // sass 编译
 gulp.task("sass",()=>{
-	return gulp.src(["src/sass/index.scss","src/sass/register.scss","src/sass/login.scss","src/sass/goodslist.scss","src/sass/details.scss","src/sass/cartlist.scss"])
+	return gulp.src(["src/sass/index.scss","src/sass/register.scss","src/sass/login.scss","src/sass/goodslist.scss","src/sass/details.scss","src/sass/cartlist.scss","src/sass/activity.scss"])
 				.pipe(sass().on("erroe",sass.logError))
 				.pipe(gulp.dest("dist/css"))
 				.pipe(connect.reload());

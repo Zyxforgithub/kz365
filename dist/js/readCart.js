@@ -62,7 +62,7 @@ define(["jquery"],function(){
 					return ;
 				}
 				
-				if( !(countArr instanceof array) && countArr != "" ){
+				if( !(countArr instanceof Array) && countArr != "" ){
 					var arr = [];
 					arr.push( countArr,opt.value );
 					countArr = arr;
@@ -79,16 +79,20 @@ define(["jquery"],function(){
 					return;
 				}
 			}
-			if(  typeof opt == "string" && keyword != "" ){
+			if(  typeof opt == "string" && kword ){
 				var countArr = this.getCookie(opt);
-				if( countArr instanceof array && countArr.length != 0 ){
+				if( countArr instanceof Array && countArr.length != 0 ){
 					for( var i=0 ; i<countArr.length ; i++ ){
-						if( countArr[i].user == keyword ){
+						if( countArr[i].user == kword ){
 							break;
 						}
 					}
 					return countArr[i].pass;
 				}
+			}
+			if( typeof opt == "string" && kword == undefined ){
+				var countArr = this.getCookie(opt);
+				return countArr;
 			}
 
 		},
@@ -138,10 +142,9 @@ define(["jquery"],function(){
 				}
 			}
 			if(  typeof opt == "string" && kword == "num"  ){
-				console.log(4)
 				var goodsArr = this.getCookie(opt);
 				var allNum = 0;
-				if( goodsArr instanceof array && goodsArr.length != 0 ){
+				if( goodsArr instanceof Array && goodsArr.length != 0 ){
 					for( var i=0 ; i<goodsArr.length ; i++ ){
 						allNum += parseInt(goodsArr[i].num);
 					}

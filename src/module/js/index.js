@@ -3,7 +3,7 @@ require.config({
 		"jquery":"../lib/jquery-2.0.3",
 	}
 })
-require(["loadindex","banner","louti"],function(loadsource,banner,louti){
+require(["loadindex","banner","louti","readCart"],function(loadsource,banner,louti,Cookie){
 	var selectbtns = $("#selectbtns").children();
 	var imgs = $("#imgbox").children();
 	var outbox = $("#banner");
@@ -22,4 +22,14 @@ require(["loadindex","banner","louti"],function(loadsource,banner,louti){
 		div:$(".title"),
 		figer:$("#sidenav").children()
 	})
+	$(".rightbar li:last").on("click",function(){
+		$("html,body").animate({
+			scrollTop:0
+		},500)
+	})
+	$("#toCart").on("click",function(){
+		location.href = "cartlist.html";
+	})
+	var cookie = new Cookie();
+	$("#showNum").html(cookie.goods("goods","num"))
 })

@@ -4,6 +4,19 @@ $case:(1 #d8d4e5 #7e7892 #746e87 #f0ebff) (2 #d1d8f5 #6b77ac #6b77ac #e9edfc) (3
 nav{
 	border-bottom:2px solid nth($borderColor,1);
 }
+#showNum{
+	position:absolute;
+	width:15px;
+	height:15px;
+	text-align:center;
+	line-height:15px;
+	border-radius:50%;
+	background-color:red;
+	color:#fff;
+	right:0;
+	top:0;
+	font-size:12px;
+}
 .banner{
 	position:relative;
 	height:460px;

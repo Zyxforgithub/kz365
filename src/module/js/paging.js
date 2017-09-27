@@ -50,7 +50,6 @@ define(["jquery"],function(){
 			this.rendering();
 		},
 		rendering:function(){	// 根据this.sortArr对页面进行渲染
-			console.log(this.sortArr.length);
 			if( this.sortArr.length == 0 ){
 				var str = '<p class="no-data">暂无数据！</p>'
 				this.list.html(str);
