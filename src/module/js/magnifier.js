@@ -9,7 +9,6 @@ define(["jquery"],function(){
 	Magnifier.prototype = {
 		init : function(){
 			var that = this;
-			console.log(this.obimg)
 			this.opos.css({
 				"width":this.mask.width()*this.mask.width()/this.obimg.width(),
 				"height":this.mask.height()*this.mask.height()/this.obimg.height()
@@ -40,7 +39,6 @@ define(["jquery"],function(){
 				top:y
 			})
 			this.obimg.css("position","absolute");
-			console.log(x,y)
 			this.obimg.css({
 				left:-x*this.mask.width()/this.opos.width(),
 				top:-y*this.mask.height()/this.opos.height()

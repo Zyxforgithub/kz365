@@ -802,7 +802,8 @@ nav {
         height: 24px;
         background-color: #8fc31f;
         display: block;
-        color: #fff; }
+        color: #fff;
+        cursor: pointer; }
       .panel .panel-body .numbox span {
         display: block;
         text-align: center;
@@ -818,9 +819,10 @@ nav {
   font-size: 14px; }
   .count .pull-left {
     padding-left: 20px; }
-    .count .pull-left a {
-      padding: 0 10px; }
-      .count .pull-left a:hover {
+    .count .pull-left span {
+      padding: 0 10px;
+      cursor: pointer; }
+      .count .pull-left span:hover {
         color: #8fc31f; }
   .count .goBuy {
     diplay: block;

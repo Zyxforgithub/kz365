@@ -3,7 +3,7 @@ require.config({
 		"jquery":"../lib/jquery-2.0.3"
 	}
 })
-require(["loaddetails","banner","tab","magnifier"],function(a,banner,Tab,Magnifier){
+require(["loaddetails","banner","tab","magnifier","readCart"],function(a,banner,Tab,Magnifier,Cookie){
 	$("nav").on("mouseenter",".classification",function(){
 		$(this).children(".drop-nav-item").stop().slideDown();
 	}).on("mouseleave",".classification",function(){
@@ -15,7 +15,7 @@ require(["loaddetails","banner","tab","magnifier"],function(a,banner,Tab,Magnifi
 	})
 	.then(function(res){
 		for( var i= 0 ; i<res.length ; i++ ){
-			if( res[i][idArr[0]] == idArr[1] ){
+			if( res[i][idArr[0]] == parseInt(idArr[1]) ){
 				var goods = res[i];
 				break;
 			}
@@ -54,7 +54,6 @@ require(["loaddetails","banner","tab","magnifier"],function(a,banner,Tab,Magnifi
 // 商品 数量更改按钮添加事件
 		$(".numChoice .btn").on("click",function(){
 			var num = parseInt($(".numbox").html());
-			console.log($(this));
 			if($(this).hasClass("leftbtn")){
 				num = num<=1 ? 1 : --num;
 			}else{
@@ -103,7 +102,6 @@ require(["loaddetails","banner","tab","magnifier"],function(a,banner,Tab,Magnifi
 				$(".detail-title").find(".addCar").removeClass("hide");
 				$(".detail-title .detail-ad-title").find(".lx").removeClass("hide").siblings().addClass("hide");
 			}else{
-				console.log(2);
 				$(".detail-title").removeClass("fixAuto");
 				$(".detail-title").find(".addCar").addClass("hide");
 				$(".detail-title .detail-ad-title").find(".tj").removeClass("hide").siblings().addClass("hide");
@@ -139,6 +137,16 @@ require(["loaddetails","banner","tab","magnifier"],function(a,banner,Tab,Magnifi
 			$(this).index()
 			$(".goods-show-img .lg-box img").attr("src",goods.bgimg[$(this).index()]);
 			$(".goods-show-img .small-box img").attr("src",goods.smimg[$(this).index()]);
+		})
+// 添加到购物车   
+		var cookie = new Cookie()
+		$(".addCar").on("click",function(){
+			cookie.goods()
+			cookie.goods({
+				key:"goods",
+				value:{"id":$(this).attr("data-id"),"num":$(".numbox").html()},
+				add:true
+			})
 		})
 	})	
 })

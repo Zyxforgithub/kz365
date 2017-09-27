@@ -134,6 +134,7 @@ nav{
 				background-color:$successColor;
 				display:block;
 				color:#fff;
+				cursor:pointer;
 			}
 			span{
 				display:block;
@@ -153,8 +154,9 @@ nav{
 	font-size:$baseSize+2;
 	.pull-left{
 		padding-left:20px;
-		a{
+		span{
 			padding:0 10px;
+			cursor:pointer;
 			&:hover{
 				color:$successColor;
 			}
