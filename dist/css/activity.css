@@ -782,6 +782,8 @@ header {
       padding: 8px 12px;
       cursor: pointer;
       text-align: center; }
+      .a_main .contentb a:hover {
+        background-color: #2f759a; }
   .a_main .bottom_p {
     margin-bottom: 20px; }
     .a_main .bottom_p .imgb {

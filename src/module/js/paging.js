@@ -60,6 +60,12 @@ define(["jquery"],function(){
 					break;
 				}
 				var item = this.sortArr[i];
+				var istr = ""
+				if( item.mode[0].pattern == "随租随还" ){
+					istr = '<i>随租随还</i>';
+				}else{
+					istr = '';
+				}
 				html+='<li data-id='+item.id+'>'+
 							'<div class="imgbox">'+
 								'<a href="#"><img src="'+item.showimg+'" alt=""></a>'+
@@ -71,8 +77,7 @@ define(["jquery"],function(){
 								'<p>'+
 									'<span class="price">'+item.mode[0].price+'</span>'+
 								'</p>'+
-							'</div>'+
-						'</li>'
+							'</div>'+istr+'</li>';
 			}
 			this.list.html(html);
 			if(this.isload){

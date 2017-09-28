@@ -107,7 +107,9 @@ header{
 			padding:8px 12px;
 			cursor:pointer;
 			text-align:center;
-
+			&:hover{
+				background-color:#2f759a;
+			}
 		}
 	}
 	.bottom_p{
